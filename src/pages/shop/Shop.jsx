@@ -1,66 +1,32 @@
-import React from 'react'
+import React, { useState } from "react";
+import Card from "react-bootstrap/Card";
+import { AiFillStar } from "react-icons/ai";
+import { AiOutlineStar } from "react-icons/ai";
+import "../style/Shop.css"
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-const Shop = () => {
-  return (
-    <div className=' d-flex flex-wrap justify-content-evenly'>   
-         <Card style={{ width: '18rem' }}>
-    <Card.Img variant="top" src="holder.js/100px180" />
-    <Card.Body>
-      <Card.Title>Card Title</Card.Title>
-      <Card.Text>
-        Some quick example text to build on the card title and make up the
-        bulk of the card's content.
-      </Card.Text>
-      <Button variant="primary">Go somewhere</Button>
-    </Card.Body>
-  </Card>
-  <Card style={{ width: '18rem' }}>
-    <Card.Img variant="top" src="holder.js/100px180" />
-    <Card.Body>
-      <Card.Title>Card Title</Card.Title>
-      <Card.Text>
-        Some quick example text to build on the card title and make up the
-        bulk of the card's content.
-      </Card.Text>
-      <Button variant="primary">Go somewhere</Button>
-    </Card.Body>
-  </Card>
-  <Card style={{ width: '18rem' }}>
-    <Card.Img variant="top" src="holder.js/100px180" />
-    <Card.Body>
-      <Card.Title>Card Title</Card.Title>
-      <Card.Text>
-        Some quick example text to build on the card title and make up the
-        bulk of the card's content.
-      </Card.Text>
-      <Button variant="primary">Go somewhere</Button>
-    </Card.Body>
-  </Card>
-  <Card style={{ width: '18rem' }}>
-    <Card.Img variant="top" src="holder.js/100px180" />
-    <Card.Body>
-      <Card.Title>Card Title</Card.Title>
-      <Card.Text>
-        Some quick example text to build on the card title and make up the
-        bulk of the card's content.
-      </Card.Text>
-      <Button variant="primary">Go somewhere</Button>
-    </Card.Body>
-  </Card>
-  <Card style={{ width: '18rem' }}>
-    <Card.Img variant="top" src="holder.js/100px180" />
-    <Card.Body>
-      <Card.Title>Card Title</Card.Title>
-      <Card.Text>
-        Some quick example text to build on the card title and make up the
-        bulk of the card's content.
-      </Card.Text>
-      <Button variant="primary">Go somewhere</Button>
-    </Card.Body>
-  </Card>
-  </div>
-  )
-}
+const Shop = ({ producats,oppo }) => { 
 
-export default Shop
+  return (
+    <div className=" d-flex flex-wrap justify-content-evenly">
+      {producats.map((producat) => (
+        <Card style={{ width: "18rem" }} key={producat.id}  className=" headcard border-0 m-3">
+          <Card.Img variant="top" src={producat.img} />
+          <Card.Body>
+            <Card.Title className="classUnhiden">{producat.tital}</Card.Title>
+            <Card.Title onClick={oppo}  className="classhiden text-success">+ Add To Cart</Card.Title>
+            <Card.Text>
+              <AiFillStar className=" text-warning" />
+              <AiFillStar className=" text-warning" />
+              <AiFillStar className=" text-warning" />
+              <AiFillStar className=" text-warning" />
+              <AiOutlineStar />
+            </Card.Text>
+            <Card.Title>${producat.price}</Card.Title>
+          </Card.Body>
+        </Card>
+      ))}
+    </div>
+  );
+};
+
+export default Shop;

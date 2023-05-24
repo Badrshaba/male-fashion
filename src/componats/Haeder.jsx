@@ -7,7 +7,7 @@ import { ImEnter } from "react-icons/im";
 import {Link} from "react-router-dom"
  import logo from "../img/logo.png"
  import "../pages/style/Haeder.css"
-const Haeder = () => {
+const Haeder = ({handleShow,cartProducats}) => {
   return (
     <div>    <Navbar bg="light" expand="lg">
     <Container>
@@ -21,8 +21,11 @@ const Haeder = () => {
           <Nav.Link as={Link} to="/" className='nav fw-bold '>About Us</Nav.Link>
         </Nav>
         <div className=' ms-auto w-25 d-flex justify-content-center '>
-          <Nav.Link href="#link" className='icon me-3 text-black'><HiOutlineShoppingBag/></Nav.Link>
-          <Nav.Link href="#link" className='icon '><ImEnter/></Nav.Link>
+          <Nav.Link  className='icon me-3 text-black' onClick={handleShow}>
+          <div className={cartProducats.length==0? "none":"numbers"}><h6>{cartProducats.length!==0&&cartProducats.length}</h6></div>
+            <HiOutlineShoppingBag/>
+            </Nav.Link>
+          <Nav.Link as={Link} to="/logIn" className='icon '><ImEnter/></Nav.Link>
           </div>
       </Navbar.Collapse>
     </Container>

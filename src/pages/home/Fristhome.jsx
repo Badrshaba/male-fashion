@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import { BsArrowRight } from "react-icons/bs";
 import {Link} from "react-router-dom"
 
-const Fristhome = () => {
+const Fristhome = () => { 
   return (
     <div className=' haedimg w-100 vh-100  '>
        

@@ -4,10 +4,32 @@
     display: flex;
     align-items: center;
 }
-.nav{
+.nav,.nav-link:focus{
     color: rgba(45, 36, 39, 50%);
 }
 .nav:hover{
     color: black;
     border-bottom: red solid;
 }
+.numbers {
+    top: 0px;
+    background: red;
+    width: 18px;
+    height: 23px;
+    color: white;
+    border-radius: 33px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+  }
+  .none {
+    top: 0px;
+    background: transparent;
+    width: 18px;
+    height: 23px;
+    color: white;
+    border-radius: 33px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+  }
