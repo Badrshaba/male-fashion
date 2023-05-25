@@ -11,8 +11,9 @@ const Footer = () => {
   return (
     
     <div className="  footer d-flex flex-column align-items-center pb-1 ">
-      <div className="container footer2 d-flex justify-content-around align-items-start flex-wrap">
-      <div className="div">
+      <div className="footer2 ">
+        <div className=" d-flex headdiv flex-wrap justify-content-evenly align-items-start">
+        <div className="div ">
         <div className="mb-3"><img src={logo}  /></div>
         <p>
           he customer is at the heart of our 
@@ -20,7 +21,7 @@ const Footer = () => {
         </p>
         <div className="mt-3"><img src={visa}  /></div>
       </div>
-      <div className="div">
+      <div className="div shoppingdiv shoppingdiv me-2">
         <h5 className="mb-3">SHOPPING</h5>
         <ol className=" p-0">
           <li>Home</li>
@@ -28,21 +29,23 @@ const Footer = () => {
           <li>About Us</li>
         </ol>
       </div>
-      <div className="div">
-        <h5 className="mb-3">PARTNER</h5>
+      <div className="div shoppingdiv me-2 divmedia">
+        <h5 className="mb-3 text-center">PARTNER</h5>
         <div className=" images d-flex flex-wrap justify-content-evenly ">
-        <img src={img1} className="me-3 mt-3"  />
-        <img src={img2} className="me-3 mt-3"/>
-        <img src={img3} className="me-3 mt-3" />
-        <img src={img4} className="me-3 mt-3" />
+        <img src={img1} width="60px" height="70px" className="me-2 mt-2"  />
+        <img src={img2} width="60px" height="70px" className="me-2 mt-2"/>
+        <img src={img3} width="60px" height="70px" className="me-2 mt-2"/>
+        <img src={img4} width="60px" height="70px" className="me-2 mt-2"/>
         </div>
 
       </div>
-      <div className="div">
+      <div className="div divmedia">
       <h5 className="mb-3">NEWLETTER</h5>
       <p>Be the first to know about new arrivals , look books,sales & promos! </p>
       <Form.Control className="input" type="email" placeholder="Your email" />
       </div>
+        </div>
+
       </div>
       <hr className=" text-white w-75 text-center" />
  <p>Copyright © 2023 & 2020</p>

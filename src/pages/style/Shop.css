@@ -29,3 +29,10 @@
 .classhiden:hover{
 cursor: pointer;
 }
+@media screen and (max-width: 495px) {
+  h4{
+    font-size: 15px;
+  }
+
+}
+ 

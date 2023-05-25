@@ -11,10 +11,9 @@ import Login from './pages/login&creatAccount/Login'
 import Creataccount from './pages/login&creatAccount/Creataccount'
 
 const App = () => {
-  const[producats,setproducats]=useState([{id:1,tital:"naruto hoodie",price:325,img:img1},{id:2,tital:"naruto hoodie",price:325,img:img1},{id:3,tital:"naruto hoodie",price:325,img:img1},{id:4,tital:"naruto hoodie",price:325,img:img1}])
+  const[producats,setproducats]=useState([{id:1,tital:"naruto hoodie",price:325,count:1,img:img1},{id:2,tital:"naruto hoodie",price:325,count:1,img:img1},{id:3,tital:"naruto hoodie",price:325,count:1,img:img1},{id:4,tital:"naruto hoodie",price:325,count:1,img:img1}])
   const[cartProducats,setcartProducats]=useState([])
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
  const oppo=()=>{
@@ -24,7 +23,7 @@ const App = () => {
     <div>
        <div className='text-center p-1 ads'><h4>Free shipping, 30-day return or refund guarantee</h4></div>
       <Haeder handleShow={handleShow} cartProducats={cartProducats}/>
-      <Cart show={show} handleClose={handleClose} handleShow={handleShow} cartProducats={cartProducats}/>
+      <Cart show={show} handleClose={handleClose}  cartProducats={cartProducats}/>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/shop" element={<Shop producats={producats} oppo={oppo}/>}/>

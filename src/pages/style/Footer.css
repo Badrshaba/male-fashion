@@ -14,17 +14,46 @@ li{
     list-style: none;
 }
 .div{
-    width: 25%;
+    width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     
 }
+.shoppingdiv{
+    width: 200px !important;
+}
+
 .images{
-    width: 55%;
+    width: 200px;
 }
 .footer2{
-    
+    width: 95%;
     padding: 50px 0;
 }
+@media screen and (max-width: 860px) {
+    .div{
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+    }
+    .divmedia{
+        margin-top: 35px;
+    }
+    .headdiv{
+        margin: 10px;
+    }
+    .div p {
+        text-align: center;
+    }
+  }
+  @media screen and (max-width: 692px) {
+    .shoppingdiv{
+        margin-top: 35px;
+    }
+
+  }

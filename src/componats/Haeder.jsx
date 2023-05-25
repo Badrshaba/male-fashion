@@ -21,7 +21,7 @@ const Haeder = ({handleShow,cartProducats}) => {
           <Nav.Link as={Link} to="/" className='nav fw-bold '>About Us</Nav.Link>
         </Nav>
         <div className=' ms-auto w-25 d-flex justify-content-center '>
-          <Nav.Link  className='icon me-3 text-black' onClick={handleShow}>
+          <Nav.Link  className='icon me-3 text-black d-flex flex-column justify-content-center' onClick={handleShow}>
           <div className={cartProducats.length==0? "none":"numbers"}><h6>{cartProducats.length!==0&&cartProducats.length}</h6></div>
             <HiOutlineShoppingBag/>
             </Nav.Link>

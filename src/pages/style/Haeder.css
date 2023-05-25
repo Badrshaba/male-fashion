@@ -12,7 +12,7 @@
     border-bottom: red solid;
 }
 .numbers {
-    top: 0px;
+    
     background: red;
     width: 18px;
     height: 23px;
@@ -20,7 +20,7 @@
     border-radius: 33px;
     display: flex;
     justify-content: center;
-    position: absolute;
+    
   }
   .none {
     top: 0px;
