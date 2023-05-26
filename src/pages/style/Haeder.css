@@ -3,6 +3,7 @@
     color: rgb(0, 0, 100);
     display: flex;
     align-items: center;
+    position: relative
 }
 .nav,.nav-link:focus{
     color: rgba(45, 36, 39, 50%);
@@ -12,7 +13,7 @@
     border-bottom: red solid;
 }
 .numbers {
-    
+    top: -30%;
     background: red;
     width: 18px;
     height: 23px;
@@ -20,6 +21,7 @@
     border-radius: 33px;
     display: flex;
     justify-content: center;
+    position: absolute;
     
   }
   .none {
@@ -33,3 +35,7 @@
     justify-content: center;
     position: absolute;
   }
+  button:focus:not(:focus-visible) {
+    outline: 0;
+    box-shadow: none;
+}

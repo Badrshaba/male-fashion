@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { ImEnter } from "react-icons/im";
 import {Link} from "react-router-dom"
- import logo from "../img/logo.png"
+ import logo from "../img/logo.png" 
  import "../pages/style/Haeder.css"
 const Haeder = ({handleShow,cartProducats}) => {
   return (

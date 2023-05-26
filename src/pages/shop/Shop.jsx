@@ -4,7 +4,7 @@ import { AiFillStar } from "react-icons/ai";
 import { AiOutlineStar } from "react-icons/ai";
 import "../style/Shop.css"
 import Button from 'react-bootstrap/Button';
-const Shop = ({ producats,oppo }) => { 
+const Shop = ({ producats,addproducts }) => { 
 
   return (
     <div className=" d-flex flex-wrap justify-content-evenly">
@@ -13,7 +13,7 @@ const Shop = ({ producats,oppo }) => {
           <Card.Img variant="top" src={producat.img} />
           <Card.Body>
             <Card.Title className="classUnhiden">{producat.tital}</Card.Title>
-            <Card.Title onClick={oppo}  className="classhiden text-success">+ Add To Cart</Card.Title>
+            <Card.Title onClick={()=>addproducts(producat)}  className="classhiden text-success">+ Add To Cart</Card.Title>
             <Card.Text>
               <AiFillStar className=" text-warning" />
               <AiFillStar className=" text-warning" />

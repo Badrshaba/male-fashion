@@ -6,7 +6,7 @@ import Footer from './componats/Footer'
 import Home from './pages/home/Home'
 import img1 from "./img/download.jpeg"
 import {Routes,Route} from "react-router-dom"
-import Cart from './pages/cart/Cart'
+import ListCart from "./pages/cart/ListCart.jsx"
 import Login from './pages/login&creatAccount/Login'
 import Creataccount from './pages/login&creatAccount/Creataccount'
 
@@ -16,17 +16,24 @@ const App = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
- const oppo=()=>{
-  console.log("pk");
+
+ const addproducts=(obj)=>{
+  if(!cartProducats.includes(obj)){
+    setcartProducats([ obj,...cartProducats])
+   }else{
+    setcartProducats([...cartProducats])
+    cartProducats.map((e)=>{if(e.id===obj.id){e.count++}})
+    
+   }
  }
   return (
     <div>
        <div className='text-center p-1 ads'><h4>Free shipping, 30-day return or refund guarantee</h4></div>
       <Haeder handleShow={handleShow} cartProducats={cartProducats}/>
-      <Cart show={show} handleClose={handleClose}  cartProducats={cartProducats}/>
+      <ListCart show={show} handleClose={handleClose}  cartProducats={cartProducats}/>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/shop" element={<Shop producats={producats} oppo={oppo}/>}/>
+        <Route path="/shop" element={<Shop producats={producats} addproducts={addproducts} />}/>
         <Route path="/" element={<Home/>}/>
         <Route path="/logIn" element={<Login/>}/>
         <Route path="/logIn/creataccount" element={<Creataccount/>}/>
