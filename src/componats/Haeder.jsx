@@ -9,7 +9,7 @@ import {Link} from "react-router-dom"
  import "../pages/style/Haeder.css"
 const Haeder = ({handleShow,cartProducats}) => {
   return (
-    <div>    <Navbar bg="light" expand="lg">
+    <div className='sticky-top'>    <Navbar bg="light" expand="lg">
     <Container>
       
        <Navbar.Brand as={Link} to="/"><img src={logo}/></Navbar.Brand> 

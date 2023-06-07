@@ -1,3 +1,6 @@
 .cartIcon{
     font-size: 300px;
 }
+.hovericon:hover{
+    cursor: pointer;
+}

@@ -12,8 +12,8 @@ const Shop = ({ producats,addproducts }) => {
         <Card style={{ width: "18rem" }} key={producat.id}  className=" headcard border-0 m-3">
           <Card.Img variant="top" src={producat.img} />
           <Card.Body>
-            <Card.Title className="classUnhiden">{producat.tital}</Card.Title>
-            <Card.Title onClick={()=>addproducts(producat)}  className="classhiden text-success">+ Add To Cart</Card.Title>
+            <Card.Title className="classUnhiden">{producat.name}</Card.Title>
+            
             <Card.Text>
               <AiFillStar className=" text-warning" />
               <AiFillStar className=" text-warning" />
@@ -22,6 +22,10 @@ const Shop = ({ producats,addproducts }) => {
               <AiOutlineStar />
             </Card.Text>
             <Card.Title>${producat.price}</Card.Title>
+            <div className=" w-100 text-center">
+            <Button onClick={()=>addproducts(producat)}  className="w-100" variant="outline-secondary">Add to card</Button>
+            </div>
+            
           </Card.Body>
         </Card>
       ))}

@@ -3,3 +3,18 @@
     background-size: cover;
     
 }
+.img1{
+    background-image: url(/src/img/banner/banner-1.jpg);
+    background-size: cover;
+    width: 300px;;
+    height: 300px;
+}
+
+.relative1{
+    position: relative;
+}
+.postion1{
+    position: absolute;
+    left: 23rem;
+    top: 5rem;
+}

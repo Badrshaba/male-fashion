@@ -1,13 +1,14 @@
-import React from 'react'
-import Fristhome from './Fristhome'
+import React from "react";
+import Fristhome from "./Fristhome";
+
 
 const Home = () => {
   return (
-    <div >
-       <Fristhome/>
-
+    <div>
+      <Fristhome />
+    
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
