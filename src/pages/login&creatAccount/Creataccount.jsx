@@ -35,30 +35,25 @@ const Creataccount = () => {
           <Form.Label>Image </Form.Label>
           <Form.Control type="text" placeholder="Image" />
         </Form.Group>
-        <div className=" d-flex justify-content-between ">
-          <div className=" div"> 
+        
             {" "}
             <Form.Group className="mb-3 fw-bold" controlId="formBasicEmail">
               <Form.Label>City</Form.Label>
               <Form.Control type="text" placeholder="Enter city" className=" w-100" />
             </Form.Group>
-          </div>
-          <div className=" div">
+          
             <Form.Label className=" fw-bold">Gender</Form.Label>
             <Form.Select aria-label="Default select example" className=" w-100">
               <option value="1">male</option>
               <option value="2">female</option>
             </Form.Select>
-          </div>
-
-          <div className=" div">
+          
             {" "}
             <Form.Group className="mb-3 fw-bold " controlId="formBasicEmail">
               <Form.Label>Phone Number</Form.Label>
               <Form.Control type="text" placeholder="Enter phone number" className=" w-100" />
             </Form.Group>
-          </div>
-        </div>
+        
         <Form.Group
           className="mb-3 fw-bold text-primary"
           controlId="formBasicCheckbox"

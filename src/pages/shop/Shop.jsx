@@ -4,6 +4,7 @@ import { AiFillStar } from "react-icons/ai";
 import { AiOutlineStar } from "react-icons/ai";
 import "../style/Shop.css"
 import Button from 'react-bootstrap/Button';
+import Scroll from "../home/Scroll";
 const Shop = ({ producats,addproducts }) => { 
 
   return (
@@ -28,7 +29,9 @@ const Shop = ({ producats,addproducts }) => {
             
           </Card.Body>
         </Card>
+        
       ))}
+      <Scroll/>
     </div>
   );
 };
