@@ -8,9 +8,10 @@ import Scroll from "../home/Scroll";
 const Shop = ({ producats,addproducts }) => { 
 
   return (
-    <div className=" d-flex flex-wrap justify-content-evenly">
-      {producats.map((producat) => (
-        <Card style={{ width: "18rem" }} key={producat.id}  className=" headcard border-0 m-3">
+    <div className="container">
+<div className="row justify-content-center" >
+{producats.map((producat) => (
+        <Card style={{ width: "18rem" }} key={producat.id}  className="border-0 m-3 col-8 col-md-6 col-lg-4 h-50">
           <Card.Img variant="top" src={producat.img} />
           <Card.Body>
             <Card.Title className="classUnhiden">{producat.name}</Card.Title>
@@ -31,6 +32,7 @@ const Shop = ({ producats,addproducts }) => {
         </Card>
         
       ))}
+</div>
       <Scroll/>
     </div>
   );

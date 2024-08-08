@@ -18,7 +18,6 @@ const Haeder = ({handleShow,cartProducats}) => {
         <Nav className="ms-auto">
           <Nav.Link as={Link} to="/" className='nav fw-bold '>Home</Nav.Link>
           <Nav.Link as={Link} to="/shop" className='nav fw-bold '>Shop</Nav.Link>
-          <Nav.Link as={Link} to="/" className='nav fw-bold '>About Us</Nav.Link>
         </Nav>
         <div className=' ms-auto w-25 d-flex justify-content-center '>
           <Nav.Link  className='icon me-3 text-black d-flex flex-column justify-content-center' onClick={handleShow}>
